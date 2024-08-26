@@ -1,0 +1,31 @@
+/* Esconde o checkbox padrão */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Estilos para o span personalizado */
+.custom-checkbox .checkbox-custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #d30000; /* Cor de fundo quando não marcado */
+  border: 2px solid #3b02c0; /* Borda ao redor do checkbox */
+  border-radius: 4px; /* Bordas arredondadas */
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Estilos para o estado marcado */
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-custom {
+  background-color: #4caf50; /* Cor de fundo quando marcado */
+  border-color: #000000; /* Cor da borda quando marcado */
+}
+
+/* Adiciona um ícone de check */
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: "\2714"; /* Símbolo de check */
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  left: 3px;
+  top: 0;
+}
